@@ -1,3 +1,1 @@
-git clone https://github.com/citation-style-language/styles.git
-cd styles
-git checkout 69e904cb2977b23bd3c1224dc5f42af2bf732691
+cd /path/to/your-repo
