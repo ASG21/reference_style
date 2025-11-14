@@ -70,7 +70,7 @@
     </citation>
     <bibliography et-al-min="6" et-al-use-first="1" entry-spacing="0">
         <layout>
-            <text variable="citation-number" font-weight="bold" suffix="."/>
+            <text variable="citation-number" font-weight="bold" suffix="."
             <group delimiter=" ">
                 <choose>
                     <if type="chapter paper-conference" match="any">
@@ -85,6 +85,7 @@
         </layout>
     </bibliography>
 </style>
+
 
 
 
