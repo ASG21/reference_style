@@ -16,13 +16,6 @@
         <updated>2016-02-05T14:26:52+00:00</updated>
         <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
     </info>
-    <macro name="author">
-        <names variable="author">
-            <name and="symbol" delimiter-precedes-last="never" et-al-min="2" initialize-with=". " name-as-sort-order="all"/>
-            <label form="short" prefix=", "/>
-            <et-al font-style="italic"/>
-        </names>
-    </macro>
     <macro name="issuance">
         <choose>
             <if type="bill book graphic legal_case legislation motion_picture report song thesis chapter paper-conference" match="any">
@@ -85,6 +78,7 @@
         </layout>
     </bibliography>
 </style>
+
 
 
 
