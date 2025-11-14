@@ -43,16 +43,6 @@
             </else>
         </choose>
     </macro>
-    <macro name="editor">
-        <choose>
-            <if type="chapter paper-conference" match="any">
-                <names variable="editor" prefix="(" suffix=")">
-                    <label form="short" suffix=" "/>
-                    <name and="symbol" delimiter-precedes-last="never" initialize-with=". " name-as-sort-order="all"/>
-                </names>
-            </if>
-        </choose>
-    </macro>
     <citation collapse="citation-number">
         <sort>
             <key variable="citation-number"/>
@@ -78,6 +68,7 @@
         </layout>
     </bibliography>
 </style>
+
 
 
 
