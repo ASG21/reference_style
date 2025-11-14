@@ -9,9 +9,9 @@
             <uri>http://www.mendeley.com/profiles/anton-crombach/</uri>
         </contributor>
         <category citation-format="numeric"/>
-        <category field="science"/>
-        <category field="generic-base"/>
-        <updated>2016-02-05T14:26:52+00:00</updated>
+        <!category field="science"/>
+        <!category field="generic-base"/>
+        <!updated>2016-02-05T14:26:52+00:00</updated>
         <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
     </info>
     <macro name="issuance">
@@ -51,6 +51,7 @@
     </citation>
     <bibliography>
         <layout>
+            <text macro="issuance"/>
             <text variable="citation-number" font-weight="bold" suffix="."
             <group delimiter=" ">
                 <choose>
@@ -58,14 +59,14 @@
                         <text term="in" form="long" plural="false"/>
                     </if>
                 </choose>
-                <text variable="volume" form="short" font-weight="normal" suffix=","/>
+                <text variable="volume" form="short" font-weight="normal" suffix=":"
                 <text variable="page" form="short"/>
-                <text macro="issuance"/>
-                <text macro="access"/>
+                <!text macro="access"/>
             </group>
         </layout>
     </bibliography>
 </style>
+
 
 
 
