@@ -17,16 +17,16 @@
     <macro name="issuance">
         <choose>
             <if type="bill book graphic legal_case legislation motion_picture report song thesis chapter paper-conference" match="any">
-                <group delimiter=", " prefix="(" suffix=")">
-                    <text variable="publisher" form="short"/>
+                <group delimiter=", " prefix="" suffix="">
+                    <text variable="publisher" form="short">
                     <date variable="issued">
-                        <date-part name="year"/>
+                        <date-part name="year">
                     </date>
                 </group>
             </if>
             <else>
                 <date variable="issued" prefix="(" suffix=")">
-                    <date-part name="year"/>
+                    <date-part name="year">
                 </date>
             </else>
         </choose>
@@ -34,19 +34,19 @@
     <macro name="container-title">
         <choose>
             <if type="article-journal">
-                <text variable="container-title" font-style="italic" form="short"/>
+                <text variable="container-title" font-style="italic" form="short">
             </if>
             <else>
-                <text variable="container-title" font-style="italic"/>
+                <text variable="container-title" font-style="italic">
             </else>
         </choose>
     </macro>
     <citation collapse="citation-number">
         <sort>
-            <key variable="citation-number"/>
+            <key variable="citation-number">
         </sort>
         <layout vertical-align="sup" delimiter=",">
-            <text variable="citation-number"/>
+            <text variable="citation-number">
         </layout>
     </citation>
     <bibliography>
@@ -56,16 +56,17 @@
             <group delimiter=" ">
                 <choose>
                     <if type="chapter paper-conference" match="any">
-                        <text term="in" form="long" plural="false"/>
+                        <text term="in" form="long" plural="false">
                     </if>
                 </choose>
                 <text variable="volume" form="short" font-weight="normal" suffix=":"
-                <text variable="page" form="short"/>
-                <!text macro="access"/>
+                <text variable="page" form="short">
+                <!text macro="access">
             </group>
         </layout>
     </bibliography>
 </style>
+
 
 
 
