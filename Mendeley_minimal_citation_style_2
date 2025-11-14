@@ -78,8 +78,6 @@
                         <text term="in" form="long" plural="false"/>
                     </if>
                 </choose>
-                <!text macro="container-title"/>
-                <!text macro="editor"/>
                 <text variable="volume" form="short" font-weight="normal" suffix=","/>
                 <text variable="page" form="short"/>
                 <text macro="issuance"/>
@@ -88,6 +86,7 @@
         </layout>
     </bibliography>
 </style>
+
 
 
 
