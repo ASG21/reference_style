@@ -72,7 +72,6 @@
         <layout>
             <text variable="citation-number" font-weight="bold" suffix="."/>
             <group delimiter=" ">
-                <text macro="author" suffix="."/>
                 <choose>
                     <if type="chapter paper-conference" match="any">
                         <text term="in" form="long" plural="false"/>
@@ -86,6 +85,7 @@
         </layout>
     </bibliography>
 </style>
+
 
 
 
