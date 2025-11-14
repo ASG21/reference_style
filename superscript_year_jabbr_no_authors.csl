@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>Superscript Numeric — (Year) JournalAbbrev Volume:Pages (No Authors, Plain Journal)</title>
+    <title-short>SuperscriptNumeric-YearJAbbrev-NoAuthors</title-short>
+    <id>http://www.zotero.org/styles/superscript-numeric-year-jabbr-no-authors</id>
+    <link href="http://www.zotero.org/styles/superscript-numeric-year-jabbr-no-authors" rel="self"/>
+    <category citation-format="numeric"/>
+    <category field="generic-base"/>
+    <updated>2025-11-12T00:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">
+      This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License
+    </rights>
+  </info>
+
+  <!-- In-text: superscript numbers + commas, collapse ranges -->
+  <citation collapse="citation-number">
+    <layout delimiter=", " vertical-align="sup">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <!-- Fallback for pages/article-number -->
+  <macro name="pages-or-article">
+    <choose>
+      <if variable="page">
+        <text variable="page"/>
+      </if>
+      <else-if variable="article-number">
+        <text variable="article-number"/>
+      </else-if>
+      <!-- sometimes the page/article number is stored oddly; last resort use "number" -->
+      <else-if variable="number">
+        <text variable="number"/>
+      </else-if>
+    </choose>
+  </macro>
+
+  <!-- Fallback entry when not a journal article -->
+  <macro name="non-journal-fallback">
+    <group delimiter=" ">
+      <text value="(" />
+      <date variable="issued" date-parts="year" form="text"/>
+      <text value=")"/>
+      <choose>
+        <if variable="title">
+          <text value=" "/>
+          <text variable="title"/>
+        </if>
+      </choose>
+    </group>
+    <text value="."/>
+  </macro>
+
+  <!-- Bibliography: 1.(YYYY) JournalAbbrev Volume:Pages. -->
+  <bibliography hanging-indent="false">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout>
+      <!-- number + period, no space -->
+      <text variable="citation-number"/>
+      <text value="."/>
+      <!-- (Year) -->
+      <text value="("/>
+      <date variable="issued" date-parts="year" form="text"/>
+      <text value=") "/>
+
+      <!-- Journal abbreviation; fallback to full container title; plain text -->
+      <choose>
+        <if variable="container-title-short">
+          <text variable="container-title-short"/>
+        </if>
+        <else>
+          <text variable="container-title"/>
+        </else>
+      </choose>
+
+      <text value=" "/>
+      <!-- Volume (plain) -->
+      <text variable="volume"/>
+
+      <!-- :Pages/Article-number -->
+      <text value=":"/>
+      <text macro="pages-or-article"/>
+
+      <text value="."/>
+    </layout>
+
+    <!-- For non-journal types, override layout -->
+    <choose>
+      <if type="article-journal article-magazine article-newspaper" match="any">
+        <!-- use main layout above -->
+      </if>
+      <else>
+        <layout>
+          <text variable="citation-number"/><text value="."/>
+          <text macro="non-journal-fallback"/>
+        </layout>
+      </else>
+    </choose>
+  </bibliography>
+</style>
