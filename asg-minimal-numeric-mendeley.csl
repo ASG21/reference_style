@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>ASG Minimal Numeric (Mendeley)</title>
+    <id>http://www.zotero.org/styles/asg-minimal-numeric-mendeley</id>
+    <link href="http://www.zotero.org/styles/asg-minimal-numeric-mendeley" rel="self"/>
+    <author>
+      <name>ASG Custom</name>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="generic-base"/>
+    <summary>Numeric superscript in-text citations; bibliography as N(year) JournalAbbrev Volume:Pages.</summary>
+    <updated>2025-11-14T00:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+
+  <!-- In-text citations: superscript numbers, collapsed ranges, comma-separated -->
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout vertical-align="sup" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography: 1(2022) Environ Res 203:111609. -->
+  <bibliography>
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout suffix=".">
+      <group delimiter="">
+        <!-- Reference number -->
+        <text variable="citation-number"/>
+        <!-- Year in parentheses, no space before, space after -->
+        <date variable="issued">
+          <date-part name="year" prefix="(" suffix=") "/>
+        </date>
+        <!-- Journal short title -->
+        <text variable="container-title" form="short" suffix=" "/>
+        <!-- Volume -->
+        <text variable="volume"/>
+        <!-- Pages or article number -->
+        <text variable="page" prefix=":"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
