@@ -32,7 +32,7 @@
     <layout suffix=".">
       <group delimiter="">
         <!-- Reference number -->
-        <text variable="citation-number"/>
+        <text variable="citation-number" font-weight="bold" suffix="."/>
         <!-- Year in parentheses, no space before, space after -->
         <date variable="issued">
           <date-part name="year" prefix="(" suffix=") "/>
