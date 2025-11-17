@@ -11,7 +11,9 @@
 
   <!-- In‑text superscript numeric citations -->
   <citation collapse="citation-number">
-    <sort><key variable="citation-number"/></sort>
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
     <layout vertical-align="sup" delimiter=",">
       <text variable="citation-number"/>
     </layout>
@@ -19,7 +21,9 @@
 
   <!-- Bibliography: all references in one line, separated ONLY by a space -->
   <bibliography entry-spacing="0" line-spacing="1" delimiter=" ">
-    <sort><key variable="citation-number"/></sort>
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
     <layout suffix=".">
       <group delimiter="">
         <text variable="citation-number" font-weight="bold"/>
