@@ -27,7 +27,7 @@
   </citation>
 
   <!-- Bibliography: 1(2022) Environ Res 203:111609. All references on one line, separated by a space -->
-  <bibliography entry-spacing="0" line-spacing="1" delimiter=" ">
+  <bibliography>
     <sort>
       <key variable="citation-number"/>
     </sort>
