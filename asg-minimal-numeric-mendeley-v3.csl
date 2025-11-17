@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>ASG Minimal Numeric (Mendeley) v3</title>
+    <id>http://www.zotero.org/styles/asg-minimal-numeric-mendeley-v3</id>
+    <link href="http://www.zotero.org/styles/asg-minimal-numeric-mendeley-v3" rel="self"/>
+    <author>
+      <name>ASG Custom</name>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="generic-base"/>
+    <summary>Superscript numeric in-text citations; compact single-line bibliography with bold index and references separated by a single space.</summary>
+    <updated>2025-11-17T00:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">
+      This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License
+    </rights>
+  </info>
+
+  <!-- In-text superscript numeric citations, collapsed ranges, comma-separated -->
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout vertical-align="sup" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography: 1(2022) Environ Res 203:111609. All references on one line, separated by a space -->
+  <bibliography entry-spacing="0" line-spacing="1" delimiter=" ">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout suffix=".">
+      <group delimiter="">
+        <!-- Bold reference number -->
+        <text variable="citation-number" font-weight="bold"/>
+        <!-- Year in parentheses -->
+        <date variable="issued">
+          <date-part name="year" prefix="(" suffix=") "/>
+        </date>
+        <!-- Journal short title -->
+        <text variable="container-title" form="short" suffix=" "/>
+        <!-- Volume -->
+        <text variable="volume"/>
+        <!-- Pages or article number -->
+        <text variable="page" prefix=":"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>

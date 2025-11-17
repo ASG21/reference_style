@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>ASG Minimal Numeric (Mendeley) v2</title>
+    <id>http://www.zotero.org/styles/asg-minimal-numeric-mendeley-v2</id>
+    <link href="http://www.zotero.org/styles/asg-minimal-numeric-mendeley-v2" rel="self"/>
+    <author><name>ASG Custom</name></author>
+    <category citation-format="numeric"/>
+    <summary>Superscript citations; single-line references separated by spaces; bold index.</summary>
+  </info>
+
+  <!-- In‑text superscript numeric citations -->
+  <citation collapse="citation-number">
+    <sort><key variable="citation-number"/></sort>
+    <layout vertical-align="sup" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography: all references in one line, separated ONLY by a space -->
+  <bibliography entry-spacing="0" line-spacing="1" delimiter=" ">
+    <sort><key variable="citation-number"/></sort>
+    <layout suffix=".">
+      <group delimiter="">
+        <text variable="citation-number" font-weight="bold"/>
+        <date variable="issued">
+          <date-part name="year" prefix="(" suffix=") "/>
+        </date>
+        <text variable="container-title" form="short" suffix=" "/>
+        <text variable="volume"/>
+        <text variable="page" prefix=":"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
