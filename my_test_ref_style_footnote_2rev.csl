@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org" version="1.0" class="note" default-locale="en-US">
+  <info>
+    <title>ASG Footnote Final Fix</title>
+    <id>http://www.zotero.org</id>
+    <link href="http://www.zotero.org" rel="self"/>
+    <author><name>ASG Custom</name></author>
+    <category citation-format="note"/>
+    <updated>2024-05-20T12:00:00+00:00</updated>
+  </info>
+
+  <macro name="author-short">
+    <names variable="author">
+      <name form="short" and="symbol" et-al-min="2" et-al-use-first="1"/>
+      <et-al font-style="italic"/>
+    </names>
+  </macro>
+
+  <citation>
+    <layout delimiter="; " suffix=".">
+      <group delimiter=", ">
+        <text macro="author-short"/>
+        <text variable="title" font-style="italic"/>
+      </group>
+    </layout>
+  </citation>
+
+  <bibliography>
+    <layout>
+      <group delimiter=". ">
+        <text macro="author-short"/>
+        <text variable="title"/>
+        <text variable="container-title" form="short" font-style="italic"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
