@@ -1,55 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="note" default-locale="en-US">
+<style xmlns="http://purl.org" version="1.0" class="note" default-locale="en-US">
   <info>
-    <title>ASG Minimal Footnote (Mendeley) v3</title>
+    <title>ASG Footnote Final</title>
     <id>http://www.zotero.org</id>
     <link href="http://www.zotero.org" rel="self"/>
     <author><name>ASG Custom</name></author>
     <category citation-format="note"/>
-    <summary>Footnote style: Author et al., Title, Year. Multiple citations separated by semicolons.</summary>
+    <updated>2024-05-20T12:00:00+00:00</updated>
   </info>
 
-  <!-- Macro for Short Author (Surname only + et al.) -->
   <macro name="author-short">
     <names variable="author">
       <name form="short" and="symbol" et-al-min="2" et-al-use-first="1"/>
       <et-al font-style="italic"/>
-      <substitute>
-        <names variable="editor"/>
-        <text variable="title" form="short"/>
-      </substitute>
     </names>
   </macro>
 
-  <!-- This block now controls what appears in the Footnote -->
   <citation>
     <layout delimiter="; " suffix=".">
       <group delimiter=", ">
         <text macro="author-short"/>
         <text variable="title" font-style="italic"/>
-        <date variable="issued">
-          <date-part name="year"/>
-        </date>
       </group>
     </layout>
   </citation>
 
-  <!-- This block controls the Bibliography list at the end of the document -->
-  <bibliography entry-spacing="0" line-spacing="1">
-    <sort>
-      <key macro="author-short"/>
-    </sort>
-    <layout suffix=".">
-      <group delimiter=" ">
-        <text macro="author-short" font-weight="bold" suffix=" "/>
-        <text variable="title" suffix=", "/>
-        <text variable="container-title" form="short" font-style="italic" suffix=" "/>
-        <text variable="volume"/>
-        <text variable="page" prefix=":"/>
-        <date variable="issued" prefix=" (" suffix=")">
-          <date-part name="year"/>
-        </date>
-      </group>
+  <bibliography>
+    <layout>
+      <text macro="author-short" suffix=". "/>
+      <text variable="title" suffix=". "/>
+      <text variable="container-title" form="short" font-style="italic"/>
     </layout>
   </bibliography>
 </style>
