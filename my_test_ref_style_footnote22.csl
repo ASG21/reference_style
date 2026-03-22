@@ -16,6 +16,15 @@
   </info>
   <macro name="author">
     <names variable="author">
+      <name form="short" 
+            and="symbol" 
+            et-al-min="2" 
+            et-al-use-first="1"/>
+      <et-al font-style="italic"/>
+    </names>
+  </macro>
+<!--  <macro name="author">
+    <names variable="author">
       <name name-as-sort-order="all" 
             and="symbol" 
             delimiter-precedes-last="never" 
@@ -24,7 +33,7 @@
       <label form="short" prefix=", "/>
       <et-al font-style="italic"/>
     </names>
-  </macro>
+  </macro> -->
   <citation>
     <layout delimiter="; " suffix=".">
       <group delimiter=", ">
