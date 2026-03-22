@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-GB">
+  <info>
+    <title>Minimal footnote style for grant proposals</title>
+    <id>http://www.zotero.org</id>
+    <link href="http://www.zotero.org" rel="self"/>
+    <author>
+      <name>Anton Crombach</name>
+      <email>anton.crombach@gmail.com</email>
+    </author>
+    <category citation-format="note"/>
+    <category field="science"/>
+    <category field="generic-base"/>
+    <updated>2024-05-20T12:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <macro name="author">
+    <names variable="author">
+      <name and="symbol" delimiter-precedes-last="never" initialize-with=". " name-as-sort-order="all"/>
+      <label form="short" prefix=", "/>
+      <et-al font-style="italic"/>
+    </names>
+  </macro>
+  <citation>
+    <layout delimiter="; " suffix=".">
+      <group delimiter=", ">
+        <text macro="author"/>
+        <text variable="title" font-style="italic"/>
+      </group>
+    </layout>
+  </citation>
+  <bibliography et-al-min="2" et-al-use-first="1" entry-spacing="0">
+    <layout>
+      <group delimiter=" ">
+        <text macro="author" suffix="."/>
+        <text variable="title" font-style="italic" suffix="."/>
+        <text variable="container-title" font-style="italic" form="short"/>
+        <text variable="volume" suffix=","/>
+        <text variable="page"/>
+        <date variable="issued" prefix="(" suffix=")">
+          <date-part name="year"/>
+        </date>
+      </group>
+    </layout>
+  </bibliography>
+</style>
