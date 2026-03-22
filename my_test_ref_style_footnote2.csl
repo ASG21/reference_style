@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<style xmlns="http://purl.org" class="note" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-GB">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-GB">
   <info>
-    <title>Minimal footnote et al style</title>
+    <title>Minimal footnote style for grant proposals</title>
     <id>http://www.zotero.org</id>
     <link href="http://www.zotero.org" rel="self"/>
     <author>
-      <name>Custom User</name>
+      <name>Anton Crombach</name>
+      <email>anton.crombach@gmail.com</email>
     </author>
     <category citation-format="note"/>
+    <category field="science"/>
+    <category field="generic-base"/>
     <updated>2024-05-20T12:00:00+00:00</updated>
-    <rights license="http://creativecommons.org">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
-  <macro name="author-short">
+  <macro name="author">
     <names variable="author">
-      <name form="short" and="symbol" delimiter-precedes-last="never" initialize-with=". "/>
+      <name name-as-sort-order="all" 
+            and="symbol" 
+            delimiter-precedes-last="never" 
+            et-al-min="2" 
+            et-al-use-first="1"/>
+      <label form="short" prefix=", "/>
       <et-al font-style="italic"/>
     </names>
   </macro>
-  <!-- FORCE ET-AL HERE FOR FOOTNOTES -->
-  <citation et-al-min="2" et-al-use-first="1">
+  <citation>
     <layout delimiter="; " suffix=".">
       <group delimiter=", ">
-        <text macro="author-short"/>
+        <text macro="author"/>
         <text variable="title" font-style="italic"/>
       </group>
     </layout>
   </citation>
-  <!-- FORCE ET-AL HERE FOR BIBLIOGRAPHY -->
-  <bibliography et-al-min="2" et-al-use-first="1">
+  <bibliography et-al-min="2" et-al-use-first="1" entry-spacing="0">
     <layout>
       <group delimiter=" ">
-        <text macro="author-short" suffix="."/>
+        <text macro="author" suffix="."/>
         <text variable="title" font-style="italic" suffix="."/>
         <text variable="container-title" font-style="italic" form="short"/>
+        <text variable="volume" suffix=","/>
+        <text variable="page"/>
         <date variable="issued" prefix="(" suffix=")">
           <date-part name="year"/>
         </date>
