@@ -16,7 +16,12 @@
   </info>
   <macro name="author">
     <names variable="author">
-      <name and="symbol" delimiter-precedes-last="never" initialize-with=". " name-as-sort-order="all"/>
+      <name name-as-sort-order="all" 
+            and="symbol" 
+            initialize-with=". " 
+            delimiter-precedes-last="never" 
+            et-al-min="2" 
+            et-al-use-first="1"/>
       <label form="short" prefix=", "/>
       <et-al font-style="italic"/>
     </names>
